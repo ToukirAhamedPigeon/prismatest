@@ -1,16 +1,13 @@
-import { PrismaClient } from '@prisma/client';
+//import { PrismaClient } from '@prisma/client';
 
-const globalForPrisma = global as unknown as { prisma?: PrismaClient };
-const prisma = globalForPrisma.prisma ?? new PrismaClient();
-
-if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma;
+//const prisma = new PrismaClient();
 
 export default defineEventHandler(async () => {
   try {
-    const users = await prisma.user.findMany();
-    return { success: true, data: users };
+    //const users = await prisma.user.findMany();
+    // return { success: true, data: users };
+    return { success: true, data: "This is Just a Test" };
   } catch (error) {
-    console.error("Database Error:", error);
-    return { success: false, message: error };
+    return { success: false, message: "Internal Server Error" };
   }
 });
