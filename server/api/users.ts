@@ -7,6 +7,6 @@ export default defineEventHandler(async () => {
     const users = await prisma.user.findMany();
     return { success: true, data: users };
   } catch (error) {
-    return { success: false, message: error.message };
+    return { success: false, message: (error as Error).message };
   }
 });
