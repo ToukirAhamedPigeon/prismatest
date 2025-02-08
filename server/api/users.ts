@@ -11,6 +11,6 @@ export default defineEventHandler(async () => {
     return { success: true, data: users };
   } catch (error) {
     console.error("Database Error:", error);
-    return { success: false, message: "Internal Server Error" };
+    return { success: false, message: error };
   }
 });

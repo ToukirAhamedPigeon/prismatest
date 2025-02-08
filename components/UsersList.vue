@@ -7,7 +7,7 @@ const { data: users, pending, error } = useFetch('/api/users');
     <h2 class="text-xl font-bold mb-4">User List</h2>
     
     <div v-if="pending">Loading users...</div>
-    <div v-else-if="error" class="text-red-500">Error: {{ error.message }}</div>
+    <div v-else-if="error" class="text-red-500">Error: {{ error }}</div>
     <ul v-else class="space-y-2">
       <li 
         v-for="user in users.data" 
