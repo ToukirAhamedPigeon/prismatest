@@ -25,10 +25,5 @@ export default defineNuxtConfig({
       omitLineBreaks: false
     }
   },
-  devtools: { enabled: true },
-  modules: ['shadcn-nuxt'],
-  shadcn: {
-    prefix: '',
-    componentDir: './components/ui'
-  }
+  devtools: { enabled: true }
 })
