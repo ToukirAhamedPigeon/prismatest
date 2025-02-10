@@ -29,7 +29,7 @@ export default defineNuxtConfig({
   components: {
     dirs: [
       {
-        path: "~/components/ui/alert",
+        path: "~/components",
         global: true,
         extensions: ["vue"],
         pathPrefix: false,
