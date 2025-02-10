@@ -26,7 +26,7 @@ export default defineNuxtConfig({
     }
   },
   devtools: { enabled: true },
-  modules: ['@nuxtjs/tailwindcss', 'shadcn-nuxt'],
+  modules: ['shadcn-nuxt'],
   shadcn: {
     prefix: '',
     componentDir: './app/components/ui'
