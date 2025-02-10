@@ -25,5 +25,15 @@ export default defineNuxtConfig({
       omitLineBreaks: false
     }
   },
-  devtools: { enabled: true }
+  devtools: { enabled: true },
+  components: {
+    dirs: [
+      {
+        path: "~/components/ui/alert",
+        global: true,
+        extensions: ["vue"],
+        pathPrefix: false,
+      },
+    ],
+  },
 })
